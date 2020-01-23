@@ -1,9 +1,10 @@
-function soma(x, y){
+function soma(x, y){ //x, y são parametros
     const resultado = x + y; //essa variavel só acessada dentro da função
     return resultado;
 };
-console.log(soma(2, 2));
+console.log(soma(2, 2)); //2, 2 são argumentos
 console.log(soma('Renato', ' Xavier'));
+
 
 
 
