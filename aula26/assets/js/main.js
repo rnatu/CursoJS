@@ -15,7 +15,11 @@ const inputAltura = e.target.querySelector('#altura');
 // Armazenando os valores captados
 const altura = Number(inputAltura.value);
 
-
+if (peso === NaN) {
+    console.log('Invalido');
+    
+}
+    
 
 console.log(peso, altura);
 
@@ -31,7 +35,7 @@ function setResultado(msg) {
     resultado.innerHTML = ``; //limpar
     
     const p = criaP(); //chama a função de criar um paragrafo e armazena em uma const
-
+    
     resultado.appendChild(p); //cria um elemento filho
     p.innerHTML = msg
     
