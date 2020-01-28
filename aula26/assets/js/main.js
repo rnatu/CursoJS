@@ -15,29 +15,49 @@ const inputAltura = e.target.querySelector('#altura');
 // Armazenando os valores captados
 const altura = Number(inputAltura.value);
 
+    if (!peso) {
+        setResultado('Peso invalido', false)
+    }
 
+    if (!altura) {
+        setResultado('Altura invalido', false)
+    }
+    
+const imc = getImc(peso, altura);
 
-console.log(peso, altura);
-
+console.log(imc);
 });
+
+function getNivelImc (imc) {
+    const nivel = ['Abaixo do peso', 'Peso normal',]
+}
+
+
+
+function getImc(peso, altura){
+    const imc = peso / altura ** 2;
+    return imc.toFixed(2);
+}
+
 
 function criaP (){
     const p = document.createElement('p'); //criando um paragrafo -> ('p') e armazenando em uma const
+    p.classList.add('paragrafo-resultado') //adicionando uma classe ao paragrafo
     return p;
 };
 
-function setResultado(msg) {
+
+function setResultado(msg, isValid) {
     const resultado = document.querySelector('#resultado');
     resultado.innerHTML = ``; //limpar
     
     const p = criaP(); //chama a função de criar um paragrafo e armazena em uma const
 
     resultado.appendChild(p); //cria um elemento filho
-    p.innerHTML = msg
-    
+    p.innerHTML = msg  
 };
 
-setResultado('teste');
+setResultado(`teste`);
 
 
 
