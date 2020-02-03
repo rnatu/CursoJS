@@ -22,6 +22,8 @@ function temHabilidade(skills) {
 //                0        1        2      
 const alunos = ['Luiz', 'Maria', 'João'];
 
+console.log(frutas.length); //saber quantos elementos tem em um array
+
 console.log(alunos instanceof Array); //Detectar se é uma array - Retorna true
 
 alunos.push('Felipe', 'Leonardo'); // Adiciona no fim do array

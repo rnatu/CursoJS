@@ -17,16 +17,18 @@ let f = [1, 2 , 3];
 let g = f; //referencia -> pois apontam para o mesmo valor na memória
 console.log(f, g);
 
-f.push('A');
+f.push('A'); //push adiciona no final do array
 console.log(f, g);
 
-g.pop();
+g.pop(); //pop remove do final do array
 console.log(f, g);
+console.log('');
+
 
 
 let h = [...f]; //spread - cópia de um tipo mútavel
-f.push('Renato')
-console.log(h);
+f.unshift('Renato') //unshift adiciona no começo do array
+console.log(h, f);
 console.log(' ');
 
 
