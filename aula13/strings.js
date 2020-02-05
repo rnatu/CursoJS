@@ -9,6 +9,10 @@ let umaString = 'Um //texto'; para usar a barra em string
 let umaString = 'Um texto';
         console.log(umaString[3]);
 */
+let cpf = '315.630.690-04';
+console.log(cpf.replace(/\D/g, '')); // retirando os digitos do CPF
+
+
 let umaString = 'Um texto';
 let outraString = 'O rato roeu a roupa do rei de roma.';
 console.log(umaString.indexOf('texto')); //para saber qual o indice inicial da palavra
