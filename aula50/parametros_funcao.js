@@ -66,3 +66,8 @@ const conta = (operador, acumulador, ...numeros) => {
 
 conta('+', 0, 20,30,40,50);
 
+/////////////////////////
+function teste(a, b = 'valor padrão') {
+    console.log(a, b);
+};
+teste(1);
