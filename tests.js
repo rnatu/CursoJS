@@ -7,3 +7,7 @@ btnTarefa.addEventListener('click', function(event) { //capturando o evento de '
 
 /*sempre usar rest operator ...exemplo 
 para enviar parametros indefinidos para uma função*/
+
+
+
+// * CTRL + SHIFT + L = Seleção múltipla

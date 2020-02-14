@@ -2,6 +2,3 @@
  Curso JavaScript 2020
 
 
-CTRL + SHIFT + L = Seleção múltipla
-
-
