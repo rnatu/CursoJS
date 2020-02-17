@@ -10,4 +10,4 @@ para enviar parametros indefinidos para uma função*/
 
 
 
-// * CTRL + SHIFT + L = Seleção múltipla
+// * CTRL + SHIFT + L = Seleção múltiplas

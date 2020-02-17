@@ -9,12 +9,12 @@
 
         // * Metodos 
         this.inicia = () => {
-            this.clique();
-            this.enter();
+            this.capturaCliques();
+            this.capturaEnter();
         };
 
-        this.enter = () => {
-            this.display.addEventListener('keypress', e => {
+        this.capturaEnter = () => {
+            document.addEventListener('keypress', e => {
                 if (e.keyCode === 13) {
                     this.realizaConta();
                 }
@@ -22,14 +22,14 @@
 
         };
 
-        this.clique = () => {
+        this.capturaCliques = () => {
             document.addEventListener('click', e => {
                 const el = e.target;
                 //console.log(el);
                 if (el.classList.contains('btn-num')) this.addNumDisplay(el.innerText);
 
                 if (el.classList.contains('btn-clear')) this.display.value = '';
-                
+
                 if (el.classList.contains('btn-del')) this.del();
 
                 if (el.classList.contains('btn-eq')) this.realizaConta();
@@ -37,9 +37,13 @@
         }
 
         this.del = () => this.display.value = this.display.value.slice(0, -1);
-        
-            // * removido os () em volta do valor, pois é um unico parametro //removido tambem as {} da do método, pois retorna uma linha só
-        this.addNumDisplay = valor => this.display.value += valor;
+
+        // * removido os () em volta do valor, pois é um unico parametro //removido tambem as {} da do método, pois retorna uma linha só
+        this.addNumDisplay = valor => {
+            this.display.value += valor;
+            this.display.focus();
+
+        }
 
         this.realizaConta = () => {
             let conta = this.display.value;
