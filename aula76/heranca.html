@@ -1,0 +1,69 @@
+<script>
+
+// Produto -> aumento, desconto
+// Camiseta = cor, caneca = material
+
+function Produto(nome, preco) {
+    this.nome = nome;
+    this.preco = preco;
+}
+
+Produto.prototype.aumento = function (quantia) {
+    this.preco += quantia;
+};
+Produto.prototype.desconto = function (quantia) {
+    this.preco -= quantia;
+};
+
+
+// * Camiseta
+function Camiseta(nome, preco, cor) {
+    Produto.call(this, nome, preco); //linkar as duas funções
+    this.cor = cor;
+};
+// Camiseta.prototype.constructor = Camiseta;
+Camiseta.prototype = Object.create(Produto.prototype); //criando o objeto vazio e adicionando o prototype de produto
+Camiseta.prototype.constructor = Camiseta; //adicionando o construtor dentro da função construtoa Camiseta
+
+Camiseta.prototype.desconto = function (percentual) {
+    this.preco = this.preco - (this.preco * (percentual / 100));
+}
+
+const camiseta = new Camiseta('Regata', 18, 'Preta');
+console.log(camiseta);
+
+camiseta.aumento(10);
+console.log(camiseta);
+
+camiseta.desconto(50);
+console.log(camiseta);
+
+
+// * Caneca
+function Caneca(nome, preco, material, estoque) {
+    Produto.call(this, nome, preco); //linkando com a função contrutora Produto
+    this.material = material;
+
+    Object.defineProperty(this, 'estoque', {
+        enumerable: true,
+        configurable: false,
+
+        get: function (){
+            return estoque;
+        },
+
+        set: function(valor) {
+            if (typeof valor !== 'number') return;
+            estoque = valor
+        }
+    })
+}
+Caneca.prototype = Object.create(Produto.prototype);
+Caneca.prototype.constructor = Caneca;
+
+
+const caneca = new Caneca('Caneca Ozob', 20, 'Vidro', 5);
+caneca.estoque = 100;
+console.log(caneca);
+
+</script>
