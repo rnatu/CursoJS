@@ -42,7 +42,13 @@ console.log(pessoasComId);
 
 
 
+const num = [1, 2, 3, 4, 5]
 
+const duplicar = val => val * 2;
+
+const result = num.map(duplicar);
+
+console.log(result);
 
 
 
