@@ -33,7 +33,7 @@ function ValidaCPF(cpfEnviado) {
 ValidaCPF.prototype.valida = function () {
     if (typeof this.cpfLimpo === 'undefined') return false;
     if (this.cpfLimpo.length !== 11) return false;
-    if (this.isSquencia()) return false;
+    if (this.isSequencia()) return false;
 
     const cpfParcial = this.cpfLimpo.slice(0, -2);
     const digito1 = this.criaDigito(cpfParcial);
@@ -64,7 +64,7 @@ ValidaCPF.prototype.criaDigito = function (cpfParcial) {
     return digito > 9 ? '0' : String(digito);
 };
 
-ValidaCPF.prototype.isSquencia = function () {
+ValidaCPF.prototype.isSequencia = function () {
     const sequencia = this.cpfLimpo[0].repeat(this.cpfLimpo.length);
     return sequencia === this.cpfLimpo;
 }
