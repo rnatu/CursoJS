@@ -54,3 +54,11 @@ async function executa() {
 }
 
 executa();
+
+/*
+Estados da promise
+Pending -> Pendend
+fullfilled -> Resolvida
+rejected -> Rejeitada
+
+*/
