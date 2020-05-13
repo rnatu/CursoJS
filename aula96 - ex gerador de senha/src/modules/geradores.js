@@ -5,7 +5,7 @@ const rand = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 const geraMaiuscula = () => String.fromCharCode(rand(65,90));
 const geraMinuscula = () => String.fromCharCode(rand(97,122));
-const geraNumero = () => Number(String.fromCharCode(48,57));
+const geraNumero = () => Number(String.fromCharCode(rand(48,57)));
 // const geraSimbolo = () => String.fromCharCode(rand(33,47));
 const simbolos = ',.;~^[]{}!@#$%*()_+-';
 const geraSimbolo = () => simbolos[rand(0, simbolos.length)];
