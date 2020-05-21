@@ -7,7 +7,7 @@
 // console.log(n)
 
 // * importando uma classe de pastas seguintes ('./pasta1/pasta2/pasta3/arquivo.css)
-const Cachorro/*pode ser importado com qualquer nome*/ = require('./d/mod');
+const Cachorro/*pode ser importado com qualquer nome*/ = require('./c/mod');
 const c1 = new Cachorro('totó');
 c1.latir();
 
