@@ -33,7 +33,7 @@ app.use(routes);
 
 
 
-
+// * Configurando porta/endereço
 app.listen(3000, () => {
     console.log('Acessar http://localhost:3000')
     console.log('Servidor executando na porta 3000');
