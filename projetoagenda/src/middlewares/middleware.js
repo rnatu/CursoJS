@@ -4,14 +4,14 @@ exports.middlewareGlobal = (req, res, next) => {
 }
 
 exports.outroMiddleware = (req, res, next) => {    
-    console.log('Sou seu outro middleware')
     next();
 }
 
 exports.checkCsrfError = (err, req, res, next) => {
-    if (err && err.code === 'EBADCSRFTOKEN') {
+    if (err) {
         return res.render('404');
     }
+    next();
 }
 
 exports.csrfMiddleware = (req, res, next) => {
