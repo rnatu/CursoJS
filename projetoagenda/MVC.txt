@@ -1,0 +1,12 @@
+---routes 
+decide qual controller vai controlar a rota
+
+---controller
+decide qual é o model da rota
+decide qual é o view que vai ser utilizado
+
+---model
+é trabalhar com dados, ou base de dados em si
+
+---view
+oque o usuário iá ver
