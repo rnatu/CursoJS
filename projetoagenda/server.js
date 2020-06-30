@@ -33,6 +33,7 @@ const path = require('path');
 
 // # é uma recomendação do próprio express para segurança
 const helmet = require('helmet');
+app.use(helmet());
 // # csurf (csrfToken) - Utilizado para segurança de formulário, impedindo a terceiros de postar na nossa aplicação
 const csrf = require('csurf');
 
@@ -42,8 +43,6 @@ const csrf = require('csurf');
 // Atribuição via desestruturação, pois foi exportado somente utilizando exports, assim enviando um objeto
 const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware');
 
-// ? utilizando o helmet
-app.use(helmet());
 
 
 // # Permite postar formulários para dentro da aplicação
