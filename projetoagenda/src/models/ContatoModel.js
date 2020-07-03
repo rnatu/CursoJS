@@ -17,6 +17,13 @@ function Contato(body) {
     this.contato = null;
 }
 
+// função estática, não precisa ser instanciada para ser usada
+Contato.buscaPorId = async function (id) {
+    if(typeof id !== 'string') return;
+    const user = await ContatoModel.findById(id);
+    return user;
+}
+
 Contato.prototype.register = async function () {
     this.valida();
 
