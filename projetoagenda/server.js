@@ -8,7 +8,11 @@ const app = express();
 // # mongoose, é quem vai modelar a base de dados utilizando um schema
 const mongoose = require('mongoose');
 // # Fazendo a conexão com o banco de dados e emitindo um sinal utilizando app.emit();
-mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.CONNECTIONSTRING, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+})
     .then(() => {
         // console.log('Conectei à base de dados')
         app.emit('pronto')
