@@ -4,11 +4,15 @@ import loginRequired from '../middlewares/loginRequired';
 
 const router = new Router();
 
-router.post('/', userController.store); // o parametro '/' não é referente ao index, pois está sendo definido no app.js como /users/
-router.get('/', loginRequired, userController.index);
-router.get('/:id', userController.show);
-router.put('/:id', userController.update);
-router.delete('/:id', userController.delete);
+// # o parametro '/' não é referente ao index, pois está sendo definido no app.js como /users/
+
+// ! Não deveriam existir
+// router.get('/', userController.index);// Lista usuários
+// router.get('/:id', userController.show); // Lista um usuário pelo id no req.params
+
+router.post('/', userController.store);
+router.put('/', loginRequired, userController.update);
+router.delete('/', loginRequired, userController.delete);
 
 export default router;
 
