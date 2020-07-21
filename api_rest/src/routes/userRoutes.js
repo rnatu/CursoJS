@@ -1,10 +1,11 @@
 import { Router } from 'express';
 import userController from '../controllers/UserController';
+import loginRequired from '../middlewares/loginRequired';
 
 const router = new Router();
 
 router.post('/', userController.store); // o parametro '/' não é referente ao index, pois está sendo definido no app.js como /users/
-router.get('/', userController.index);
+router.get('/', loginRequired, userController.index);
 router.get('/:id', userController.show);
 router.put('/:id', userController.update);
 router.delete('/:id', userController.delete);
