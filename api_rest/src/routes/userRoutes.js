@@ -7,7 +7,7 @@ const router = new Router();
 // # o parametro '/' não é referente ao index, pois está sendo definido no app.js como /users/
 
 // ! Não deveriam existir
-// router.get('/', userController.index);// Lista usuários
+router.get('/', userController.index);// Lista usuários
 // router.get('/:id', userController.show); // Lista um usuário pelo id no req.params
 
 router.post('/', userController.store);
