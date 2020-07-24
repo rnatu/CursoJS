@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+// # configuração de conexão com o banco de dados
 // Utilizar o tipo de módulo do commonJS com module.exports, devido a utilização do sequelize
 module.exports = {
   dialect: 'mariadb',

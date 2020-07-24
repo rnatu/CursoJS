@@ -17,6 +17,7 @@ module.exports = {
     'quote-props': 'off',
     'no-param-reassign': 'off',
     'max-len': 'off',
+    'camelcase': 'off',
 
   },
 };
