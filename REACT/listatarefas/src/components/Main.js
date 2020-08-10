@@ -4,17 +4,17 @@ import './Main.css';
 export default class Main extends Component {
   // Utilizando class fields
   state = {
-    // novaTarefa: '',
+    novaTarefa: '',
   };
 
   handleChange = (e) => {
     this.setState({
-      // novaTarefa: e.target.value,
+      novaTarefa: e.target.value,
     });
   }
 
   render() {
-    // const { novaTarefa } = this.state;
+    const { novaTarefa } = this.state;
 
     return (
       <div className="main">
