@@ -21,5 +21,6 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': 'off', // 'off' or 0 for disable
     'react/state-in-constructor': 0,
+    'react/forbid-prop-types': 0
   },
 };
