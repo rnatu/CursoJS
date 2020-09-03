@@ -1,0 +1,7 @@
+*estado global
+->Estado inicial: {
+  usuarioLogado: false
+}
+
+-> ação -> reducer -> newState = state -> newState
+newState passa ser o estato global da aplicação
