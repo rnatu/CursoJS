@@ -3,5 +3,11 @@
   usuarioLogado: false
 }
 
--> ação -> reducer -> newState = state -> newState
+reducer sempre tem de retornar ou um novo estado ou o estado atual
+
+-> ação -> reducer -> retorna newState/ ou estado atual
 newState passa ser o estato global da aplicação
+
+
+Saga para requisição assincronas
+-> ação (request) -> saga -> reducer -> success/fail
