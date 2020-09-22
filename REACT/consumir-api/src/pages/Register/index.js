@@ -28,7 +28,6 @@ export default function Register() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    // ? console.log(nome, email, password);
     let formErrors = false;
 
     if (nome.length < 3 || nome.length > 255) {
