@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { FaPlus } from 'react-icons/fa';
 
 export const AlunoContainer = styled.div`
   margin-top: 20px;
@@ -25,6 +26,13 @@ export const ProfilePicture = styled.div`
 `;
 
 export const NovoAluno = styled(Link)`
-  display: block;
+  display: flex;
   padding: 20px 0 10px 0;
+  justify-content: start;
+`;
+
+export const PlusIcon = styled(FaPlus)`
+  align-items: center;
+  justify-content: center;
+  margin-right: 2px;
 `;
