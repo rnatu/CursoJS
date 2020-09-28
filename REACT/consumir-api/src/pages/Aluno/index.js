@@ -104,8 +104,8 @@ export default function Aluno({ match }) {
           altura,
         });
         toast.success('Aluno(a) editado(a) com sucesso!');
-        // history.push(`/aluno/${data.id}/edit`);
-        history.push('/');
+        history.push(`/aluno/${data.id}/edit`);
+        // history.push('/');
       } else {
         // criando
         await axios.post(`/alunos/`, {
@@ -178,7 +178,7 @@ export default function Aluno({ match }) {
           placeholder="Altura"
         />
 
-        <button type="submit">Enviar</button>
+        <button type="submit">Salvar</button>
       </Form>
     </Container>
   );
