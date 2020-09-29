@@ -10,7 +10,6 @@ import { Title, Form } from './styled';
 import axios from '../../services/axios';
 import history from '../../services/history';
 import * as actions from '../../store/modules/auth/actions';
-import { LOGIN_FAILURE } from '../../store/modules/types';
 
 export default function Fotos({ match }) {
   const dispatch = useDispatch();
