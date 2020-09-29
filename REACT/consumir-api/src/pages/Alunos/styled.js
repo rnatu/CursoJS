@@ -29,6 +29,7 @@ export const NovoAluno = styled(Link)`
   display: flex;
   padding: 20px 0 10px 0;
   justify-content: start;
+  width: 100px;
 `;
 
 export const PlusIcon = styled(FaPlus)`
